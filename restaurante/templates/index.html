@@ -1,0 +1,18 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bienvenido a Restaurante</title>
+</head>
+<body>
+    <h1>Bienvenido a Restaurante</h1>
+    <div>
+        <h2>Clientes</h2>
+        <a href="{% url 'login_cliente' %}">Ingresar</a> | <a href="{% url 'registro_cliente' %}">Registrarse</a>
+    </div>
+    <div>
+        <h2>Administradores</h2>
+        <a href="{% url 'login_admin' %}">Ingresar</a> | <a href="{% url 'registro_admin' %}">Registrarse</a>
+    </div>
+</body>
+</html>
