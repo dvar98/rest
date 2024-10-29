@@ -10,6 +10,12 @@ from .patterns.builder import ReservaBuilder
 def index_view(request):
     return render(request, 'index.html')
 
+def index_cliente_view(request):
+    return render(request, 'index_cliente.html')
+
+def index_admin_view(request):
+    return render(request, 'index_admin.html')
+
 def login_cliente_view(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
@@ -17,7 +23,7 @@ def login_cliente_view(request):
             usuario = authenticate(request, username=form.cleaned_data['correo'], password=form.cleaned_data['contraseña'])
             if usuario is not None:
                 login(request, usuario)
-                return redirect('home_cliente')
+                return redirect('index_cliente')
     else:
         form = LoginForm()
     return render(request, 'login_cliente.html', {'form': form})
@@ -39,13 +45,13 @@ def login_admin_view(request):
             usuario = authenticate(request, username=form.cleaned_data['correo'], password=form.cleaned_data['contraseña'])
             if usuario is not None:
                 login(request, usuario)
-                return redirect('home_admin')
+                return redirect('index_admin')
     else:
         form = LoginForm()
     return render(request, 'login_admin.html', {'form': form})
 
 def registro_admin_view(request):
-    if request.method == 'POST':
+    if (request.method == 'POST'):
         form = RegistroForm(request.POST)
         if form.is_valid():
             form.save()
