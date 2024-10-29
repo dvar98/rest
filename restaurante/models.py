@@ -52,8 +52,6 @@ class Rol(models.Model):
 class Permiso(models.Model):
     nombre = models.CharField(max_length=50)
 
-
-
 class UsuarioRol(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     rol = models.ForeignKey(Rol, on_delete=models.CASCADE)

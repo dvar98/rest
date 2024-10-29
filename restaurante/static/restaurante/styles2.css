@@ -1,0 +1,45 @@
+/* Estilos para el formulario de reserva */
+#reservationForm {
+    display: none; /* Ocultar inicialmente */
+    flex-direction: column; /* Alinear campos verticalmente */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+}
+
+#reservationForm h3 {
+    font-size: 24px; /* Tamaño del título del formulario */
+    margin-bottom: 15px; /* Espacio debajo del título */
+}
+
+.input {
+    margin-top: 15px; /* Espaciado entre campos */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+    width: calc(100% - 20px); /* Ancho total menos márgenes */
+}
+
+/* Botón de reserva */
+.btn.btna {
+    margin-top: 30px; /* Espacio superior para el botón de reserva */
+    background-color: #4CAF50; /* Color de fondo verde para el botón de reserva */
+}
+
+/* Estilo para mensajes de éxito o error */
+.alert {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.alert.success {
+    background-color: #4CAF50; /* Verde para éxito */
+}
+
+.alert.error {
+    background-color: #f44336; /* Rojo para error */
+}
+
+#reservationForm{
+    flex-direction: column;
+}

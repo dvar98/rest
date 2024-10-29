@@ -1,0 +1,174 @@
+html, body {
+    font-family: Montserrat, sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    height: 20rem;
+    width: 30rem;
+    box-shadow: 1px 1px 96px -27px rgba(0,0,0,0.75);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: width 0.5s ease, height 0.5s ease; /* Transición suave */
+    animation: shadow 6s linear infinite; /* Mantener animación de sombra */
+}
+
+.card.expanded {
+    width: 20rem; /* Mantener ancho igual */
+    height: 30rem; /* Cambiar a un rectángulo vertical */
+}
+
+.title {
+    font-weight: 600;
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+.title-register {
+    display: none; /* Ocultar inicialmente */
+}
+
+.btns {
+    display: flex; /* Alinear botones en fila */
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c72c41;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Animación de fade-in */
+.fade-in {
+    animation-name: fadeIn; /* Nombre de la animación */
+    animation-duration: 0.5s; /* Duración de la animación */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(10px); /* Desplazamiento hacia abajo */
+    }
+    
+    to {
+        opacity: 1; /* Termina visible */
+        transform: translateY(0); /* Regresa a su posición original */
+    }
+}
+
+.back-button {
+    margin-top: 20px; /* Espacio entre el título y el botón "Volver" */
+}
+
+@keyframes shadow {
+   0% {
+       box-shadow: -10px -10px 2rem rgba(55, 55, 55, 0.5);
+   }
+   25% {
+       box-shadow: -10px 10px 2rem rgba(55, 55, 55, 0.5);
+   }
+   50% {
+       box-shadow: 10px 10px 2rem rgba(55, 55, 55, 0.5);
+   }
+   75% {
+       box-shadow: 10px -10px 2rem rgba(55, 55, 55, 0.5);
+   }
+   100% {
+       box-shadow: -10px -10px 2rem rgba(55, 55, 55, 0.5);
+   }
+}
+
+.shadow {
+   position: absolute; 
+}
+
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    align-items:last baseline;
+}
+
+.input{
+   margin-top: 15px;
+}
+
+#registrationForm{
+    flex-direction: column;
+    
+}
+.material-symbols-outlined{
+    
+    color:#c72c41;
+}
+
+.special-btn{
+    border: none;
+    font-size: 20px;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.title-registro{
+    display: flex;
+    justify-content: center;
+}
+.title-register{
+    font-size: 40px;
+}
+
+.title-login{
+    display: flex;
+    justify-content: center;
+}
+.title-login{
+    font-size: 40px;
+}
+
+.login{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.btn-registro{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+.registro{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.btna{
+    margin-top: 30px;
+}
+
+#loginForm{
+    flex-direction: column;
+}
