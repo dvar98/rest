@@ -1,0 +1,15 @@
+<!-- templates/login_admin.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Administrador</title>
+</head>
+<body>
+    <h2>Login Administrador</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Ingresar</button>
+    </form>
+</body>
+</html>

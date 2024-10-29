@@ -1,0 +1,15 @@
+<!-- templates/admin_reserva.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administrar Reservas</title>
+</head>
+<body>
+    <h2>Administrar Reservas</h2>
+    <ul>
+        {% for reserva in reservas %}
+            <li>{{ reserva.fecha }} - {{ reserva.hora }} - {{ reserva.usuario.nombre }} - {{ reserva.mesa.numero }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
